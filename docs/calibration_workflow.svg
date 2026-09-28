@@ -21,11 +21,12 @@
     <path d="M48 300h40M430 285h50" stroke="#8092aa" stroke-width="5"/>
     <text x="275" y="143" text-anchor="middle" font-size="15" class="muted">示意游戏画面</text>
     <!-- generic pixel-style character -->
-    <rect x="245" y="208" width="54" height="20" rx="3" fill="#ffe66d"/><text x="272" y="223" text-anchor="middle" font-size="11" fill="#293142">我的名牌</text>
     <path d="M253 253v-17h38v17h8v13h-54v-13Z" class="hair"/><rect x="254" y="260" width="34" height="27" class="skin"/>
     <path d="M244 287h54v55h-54z" class="coat"/><path d="M250 342h18v62h-18zm24 0h18v62h-18z" class="pants"/>
     <path d="M246 402h25v13h-29zm24 0h25v13h-29z" class="boot"/><line x1="230" y1="416" x2="310" y2="416" class="ground"/>
-    <rect x="241" y="205" width="62" height="27" rx="3" fill="none" stroke="#ffe66d" stroke-width="3" stroke-dasharray="6 4"/>
+    <rect x="313" y="397" width="112" height="25" rx="4" fill="#ffe66d"/><text x="369" y="415" text-anchor="middle" font-size="12" font-weight="700" fill="#293142">自己的名牌</text>
+    <rect x="308" y="392" width="122" height="35" rx="5" fill="none" stroke="#ffe66d" stroke-width="3" stroke-dasharray="6 4"/>
+    <path d="M310 394 298 383" class="call"/><text x="337" y="375" text-anchor="middle" font-size="14" fill="#ffe66d">名牌在脚底位置</text>
     <circle cx="272" cy="414" r="9" fill="none" stroke="#ff7043" stroke-width="3"/><path d="M257 414h30m-15-15v30" stroke="#ff7043" stroke-width="3"/>
     <text x="42" y="466" class="small"><tspan fill="#ffe66d" font-weight="700">拖框</tspan><tspan> 自己的名牌（不要框到旁人）</tspan></text>
     <text x="42" y="492" class="small"><tspan fill="#ff936f" font-weight="700">点击</tspan><tspan> 角色脚底中心，确认后保存</tspan></text>
