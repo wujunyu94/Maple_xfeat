@@ -5,9 +5,10 @@ Generated from the committed Git index. The XFeat submodule is represented by it
 ```text
 .gitignore
 .gitmodules
-FILE_TREE.md
 assets/templates/.gitkeep
 config.json
+FILE_TREE.md
+install_dependencies.bat
 no_minimap_lab/__init__.py
 no_minimap_lab/.gitignore
 no_minimap_lab/async_localizer.py
@@ -68,6 +69,7 @@ no_minimap_lab/visual_motion.py
 no_minimap_lab/wz_adapter.py
 no_minimap_lab/xfeat_backend.py
 README.md
+requirements-xfeat.txt
 requirements.txt
 src/core/__init__.py
 src/core/input_driver.py

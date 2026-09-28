@@ -26,7 +26,7 @@ def check(backend):
         weights = Path(__file__).resolve().parents[1]/'third_party/accelerated_features/weights/xfeat.pt'
         report['weights_found'] = weights.is_file()
         if not weights.is_file():
-            errors.append('缺少模型：no_minimap_lab/third_party/xfeat/weights/xfeat.pt')
+            errors.append('缺少 XFeat submodule 权重：third_party/accelerated_features/weights/xfeat.pt（运行 git submodule update --init --recursive）')
         if importlib.util.find_spec('torch') is not None:
             try:
                 import torch

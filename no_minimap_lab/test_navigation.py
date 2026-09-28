@@ -88,7 +88,7 @@ class MinimapIndependence(unittest.TestCase):
 
     def test_sparse_learned_proposal_is_verified_across_scene(self):
         path=ROOT/"no_minimap_lab/cache/xfeat_stall_p41.png"
-        if not path.exists() or not (ROOT/"no_minimap_lab/third_party/xfeat/weights/xfeat.pt").exists():
+        if not path.exists() or not (ROOT/"third_party/accelerated_features/weights/xfeat.pt").exists():
             self.skipTest("optional learned regression fixture unavailable")
         import torch
         cv2.setNumThreads(4)
@@ -108,7 +108,7 @@ class MinimapIndependence(unittest.TestCase):
         if not all(p.exists() for p in paths):
             self.skipTest("captured live fixtures unavailable")
         backends=["sift-cpu"]
-        if (ROOT/"no_minimap_lab/third_party/xfeat/weights/xfeat.pt").exists():
+        if (ROOT/"third_party/accelerated_features/weights/xfeat.pt").exists():
             import torch
             backends.append("xfeat-cuda" if torch.cuda.is_available() else "xfeat-cpu")
         for backend in backends:

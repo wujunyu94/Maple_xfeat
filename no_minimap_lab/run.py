@@ -90,7 +90,7 @@ def run_offline(args):
 
 def main():
     parser = argparse.ArgumentParser(description="无小地图视觉定位实验")
-    parser.add_argument("--map-id", type=int, default=103000201)
+    parser.add_argument("--map-id", type=int, default=101000000)
     parser.add_argument("--screen-scale", type=float, default=1.0, help="屏幕像素/地图像素")
     parser.add_argument("--backend", choices=("sift-cpu", "xfeat-cpu", "xfeat-cuda"), default="sift-cpu")
     source = parser.add_mutually_exclusive_group()

@@ -57,7 +57,7 @@ class PixelValidationTests(unittest.TestCase):
         self.assertEqual(overlay.evidence, {})
 
 
-@unittest.skipUnless((ROOT / "no_minimap_lab/third_party/xfeat/weights/xfeat.pt").exists(), "XFeat not installed")
+@unittest.skipUnless((ROOT / "third_party/accelerated_features/weights/xfeat.pt").exists(), "XFeat submodule not initialized")
 class LearnedBackendTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
