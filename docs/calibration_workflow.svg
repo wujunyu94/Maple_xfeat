@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">人物标定操作顺序</title>
+  <desc id="desc">第一步在游戏画面上框选自己的名牌并标记脚底；第二步框选角色全身，再圈出帽子、头发或服饰等核心特征并选择朝向。</desc>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#202a3b"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#9fb4d0"/></marker>
+    <style>
+      text{font-family:system-ui,"Microsoft YaHei",sans-serif;fill:#f3f6fc}.muted{fill:#aebbd0}.small{font-size:17px}.label{font-size:21px;font-weight:700}.title{font-size:30px;font-weight:800}.scene{fill:#253247;stroke:#52627a;stroke-width:2}.ground{stroke:#9daec3;stroke-width:3}.hair{fill:#4a342d}.skin{fill:#f0c6a5}.coat{fill:#63a6dc}.pants{fill:#394c74}.boot{fill:#29303d}.call{stroke:#d2dcea;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="620" rx="24" fill="url(#bg)"/>
+  <text x="600" y="52" text-anchor="middle" class="title">GUI 人物标定：先名牌与脚底，再人物特征</text>
+  <g transform="translate(35 82)">
+    <rect width="550" height="490" rx="18" fill="#182234" stroke="#34445b" stroke-width="2"/>
+    <circle cx="42" cy="42" r="23" fill="#f4c95d"/><text x="42" y="50" text-anchor="middle" font-size="24" font-weight="800" fill="#162033">1</text>
+    <text x="80" y="49" class="label">名牌与脚底</text>
+    <text x="30" y="83" class="small muted">点击“③ 名牌与脚底”，在冻结画面中依次操作</text>
+    <rect x="30" y="105" width="490" height="330" rx="8" class="scene"/>
+    <path d="M30 374 Q130 353 222 374 T410 372 T520 365 V435 H30Z" fill="#33445b"/>
+    <path d="M75 435V245h20v190M446 435V215h18v220" fill="#53637a" opacity=".7"/>
+    <path d="M48 300h40M430 285h50" stroke="#8092aa" stroke-width="5"/>
+    <text x="275" y="143" text-anchor="middle" font-size="15" class="muted">示意游戏画面</text>
+    <!-- generic pixel-style character -->
+    <rect x="245" y="208" width="54" height="20" rx="3" fill="#ffe66d"/><text x="272" y="223" text-anchor="middle" font-size="11" fill="#293142">我的名牌</text>
+    <path d="M253 253v-17h38v17h8v13h-54v-13Z" class="hair"/><rect x="254" y="260" width="34" height="27" class="skin"/>
+    <path d="M244 287h54v55h-54z" class="coat"/><path d="M250 342h18v62h-18zm24 0h18v62h-18z" class="pants"/>
+    <path d="M246 402h25v13h-29zm24 0h25v13h-29z" class="boot"/><line x1="230" y1="416" x2="310" y2="416" class="ground"/>
+    <rect x="241" y="205" width="62" height="27" rx="3" fill="none" stroke="#ffe66d" stroke-width="3" stroke-dasharray="6 4"/>
+    <circle cx="272" cy="414" r="9" fill="none" stroke="#ff7043" stroke-width="3"/><path d="M257 414h30m-15-15v30" stroke="#ff7043" stroke-width="3"/>
+    <text x="42" y="466" class="small"><tspan fill="#ffe66d" font-weight="700">拖框</tspan><tspan> 自己的名牌（不要框到旁人）</tspan></text>
+    <text x="42" y="492" class="small"><tspan fill="#ff936f" font-weight="700">点击</tspan><tspan> 角色脚底中心，确认后保存</tspan></text>
+  </g>
+  <g transform="translate(615 82)">
+    <rect width="550" height="490" rx="18" fill="#182234" stroke="#34445b" stroke-width="2"/>
+    <circle cx="42" cy="42" r="23" fill="#73d6a2"/><text x="42" y="50" text-anchor="middle" font-size="24" font-weight="800" fill="#162033">2</text>
+    <text x="80" y="49" class="label">全身与核心特征</text>
+    <text x="30" y="83" class="small muted">再点击“② 特征标定（主程流程）”</text>
+    <rect x="30" y="105" width="490" height="330" rx="8" class="scene"/>
+    <path d="M30 374 Q130 353 222 374 T410 372 T520 365 V435 H30Z" fill="#33445b"/>
+    <path d="M75 435V245h20v190M446 435V215h18v220" fill="#53637a" opacity=".7"/>
+    <text x="275" y="143" text-anchor="middle" font-size="15" class="muted">示意游戏画面</text>
+    <path d="M253 253v-17h38v17h8v13h-54v-13Z" class="hair"/><rect x="254" y="260" width="34" height="27" class="skin"/>
+    <path d="M244 287h54v55h-54z" class="coat"/><path d="M250 342h18v62h-18zm24 0h18v62h-18z" class="pants"/>
+    <path d="M246 402h25v13h-29zm24 0h25v13h-29z" class="boot"/><line x1="230" y1="416" x2="310" y2="416" class="ground"/>
+    <rect x="231" y="226" width="80" height="194" rx="5" fill="none" stroke="#71e6b0" stroke-width="3" stroke-dasharray="7 5"/>
+    <path d="M251 236 265 231 283 237 293 252 288 265 272 269 255 264 247 252Z" fill="none" stroke="#ffe66d" stroke-width="3"/>
+    <circle cx="251" cy="236" r="3" fill="#ffe66d"/><circle cx="265" cy="231" r="3" fill="#ffe66d"/><circle cx="283" cy="237" r="3" fill="#ffe66d"/><circle cx="293" cy="252" r="3" fill="#ffe66d"/>
+    <path d="M320 251 C365 240 375 210 407 205" class="call"/><text x="413" y="205" class="small" fill="#ffe66d">核心特征</text>
+    <text x="42" y="466" class="small"><tspan fill="#71e6b0" font-weight="700">① 拖框</tspan><tspan> 从头顶到脚底框住完整角色</tspan></text>
+    <text x="42" y="492" class="small"><tspan fill="#ffe66d" font-weight="700">② 圈选</tspan><tspan> 帽子、头发或醒目服饰，再选朝向</tspan></text>
+  </g>
+  <text x="600" y="600" text-anchor="middle" class="small muted">请在角色静止、完整可见时标定；人物图形仅为操作示意</text>
+</svg>

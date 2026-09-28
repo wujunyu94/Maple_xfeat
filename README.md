@@ -84,7 +84,11 @@ python -m no_minimap_lab.run --map-id 101000000 --backend xfeat-cuda
 2. 在“地标后端”选择 `sift-cpu`、`xfeat-cpu` 或 `xfeat-cuda`。XFeat 选项需要已安装 PyTorch；GPU 选项还要求 `torch.cuda.is_available()` 为真。
 3. 点击“开始定位”。初次会检查依赖、生成或载入地图图集，然后开始只读捕获。点击“停止”后可改地图 ID 或后端，再点击开始。
 4. 左侧“实时原画”和“定位输出”标签可切换原画及地标/梯绳叠加；右侧显示地图总览和视野位置。状态栏显示锁定/失锁、人物、黄点坐标和耗时。
-5. 需要人物脚底坐标时，站稳后使用“③ 名牌与脚底”按提示框选名牌和脚底；“② 特征标定（主程流程）”用于录入人物外观特征。标定结果保存在本机 `no_minimap_lab/calibration/`，不会进 Git。
+5. **人物标定按顺序做两次。**先点击“③ 名牌与脚底”：在冻结画面上拖框选中自己的名牌（不要包含旁边人物的名牌），再点击角色脚底中心，确认后保存。然后点击“② 特征标定（主程流程）”：先拖框从头顶到脚底框住完整角色，点“下一步”，再沿帽子、头发或醒目服饰的轮廓依次左键添加多边形顶点，右键或按 Enter 闭合，最后选择人物当前朝向保存。示意如下：
+
+   ![人物标定顺序示意：先标注自己的名牌和脚底，再标注全身及核心外观特征](docs/calibration_workflow.svg)
+
+   标定时尽量让角色静止、完整可见，并避免名牌与相邻人物重叠。标定结果保存在本机 `no_minimap_lab/calibration/`，不会进 Git。
 6. “忽略区域”可框出不参与匹配的界面区域；“重新定位”会重置当前跟踪；“保存诊断”保存当前帧和状态供排查。
 
 定位 GUI 默认只读、不发游戏按键。下方“完整路线测试”是单独的自动控制实验，会启动按键服务并控制游戏，仅在明确需要时使用；该测试固定地图 `101000000` 和倍率 `1.0`，开始前要确认游戏状态。
@@ -119,7 +123,7 @@ python -m no_minimap_lab.compare_backends
 
 ## XFeat 上游与许可证
 
-XFeat 通过 Git submodule 引用官方仓库 [verlab/accelerated_features](https://github.com/verlab/accelerated_features)，固定在 `e92685f57f8318b18725c5c8c0bd28c7fe188d9a`。XFeat 源码、预训练权重和 Apache-2.0 许可证均由 submodule 提供；此仓库不复制或改写上游文件。请保留上游许可证及版权声明。
+本仓库代码与文档采用 Apache-2.0，根目录 [LICENSE](LICENSE) 标明许可并链接完整条款。XFeat 通过 Git submodule 引用官方仓库 [verlab/accelerated_features](https://github.com/verlab/accelerated_features)，固定在 `e92685f57f8318b18725c5c8c0bd28c7fe188d9a`。XFeat 源码、预训练权重和其 Apache-2.0 许可证由 submodule 提供；请同时保留上游许可证及版权声明。
 
 ## 文件清单
 

@@ -1,14 +1,16 @@
 # Tracked file preview
 
-Generated from the committed Git index. The XFeat submodule is represented by its pinned Git link; its contents are fetched from the upstream repository.
+Generated from `git ls-files` after this commit.
 
 ```text
 .gitignore
 .gitmodules
 assets/templates/.gitkeep
 config.json
+docs/calibration_workflow.svg
 FILE_TREE.md
 install_dependencies.bat
+LICENSE
 no_minimap_lab/__init__.py
 no_minimap_lab/.gitignore
 no_minimap_lab/async_localizer.py
