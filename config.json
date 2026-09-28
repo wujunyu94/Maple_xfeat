@@ -1,0 +1,7 @@
+{
+  "player_feature_entry_threshold": 0.7,
+  "enable_two_stage_feature": true,
+  "enable_costume_verification": true,
+  "recognition_exclusion_regions": [],
+  "yellow_dot_candidate_sizes": []
+}

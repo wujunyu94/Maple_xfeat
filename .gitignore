@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+no_minimap_lab/output/
+no_minimap_lab/calibration/
+no_minimap_lab/cache/*.tmp
+no_minimap_lab/cache/*.lock
+Map/
+Mob/
+assets/templates/*
+!assets/templates/.gitkeep
+*.log
