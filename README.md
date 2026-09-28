@@ -41,10 +41,10 @@ Maple_xfeat/
 - `2`：XFeat CPU，安装 CPU 版 PyTorch 和 XFeat 所需的 `tqdm`。
 - `3`：XFeat CUDA，安装基础依赖及 PyTorch，然后检查 PyTorch 是否能访问 NVIDIA GPU。
 
-脚本会创建 `.venv`、安装依赖并初始化 XFeat submodule。GPU 模式使用 PyPI 当前提供的 PyTorch wheel；若 CUDA 检查失败，请按 [PyTorch 官方安装选择器](https://pytorch.org/get-started/locally/)选择适合 Windows、Python 和显卡驱动的 CUDA 构建，再在虚拟环境里重装 PyTorch。安装脚本不需要管理员权限；完整路线测试中的按键服务会另外请求管理员授权。
+脚本会创建 `.venv` 并安装基础依赖；只有选择 XFeat CPU/CUDA 时才初始化 XFeat submodule 并安装 PyTorch。GPU 模式使用 PyPI 当前提供的 PyTorch wheel；若 CUDA 检查失败，请按 [PyTorch 官方安装选择器](https://pytorch.org/get-started/locally/)选择适合 Windows、Python 和显卡驱动的 CUDA 构建，再在虚拟环境里重装 PyTorch。安装脚本不需要管理员权限；完整路线测试中的按键服务会另外请求管理员授权。
 
 ```powershell
-git clone --recurse-submodules YOUR_REPOSITORY_URL Maple_xfeat
+git clone YOUR_REPOSITORY_URL Maple_xfeat
 cd Maple_xfeat
 .\install_dependencies.bat
 ```
@@ -56,10 +56,9 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-git submodule update --init --recursive
 ```
 
-手动装 XFeat CPU 时先运行 `python -m pip install tqdm`，再运行 `python -m pip install torch --index-url https://download.pytorch.org/whl/cpu`。`requirements-xfeat.txt` 是使用默认 PyPI 安装 XFeat 的可选依赖清单。GPU 构建依赖本机显卡和驱动，优先使用上方一键脚本或 [PyTorch 官方选择器](https://pytorch.org/get-started/locally/)生成的安装命令。可运行 `python -m no_minimap_lab.install_xfeat` 检查 submodule 和权重是否齐全。
+选择 XFeat 时再初始化 submodule：`git submodule update --init --recursive`。手动装 XFeat CPU 时先运行 `python -m pip install tqdm`，再运行 `python -m pip install torch --index-url https://download.pytorch.org/whl/cpu`。`requirements-xfeat.txt` 是使用默认 PyPI 安装 XFeat 的可选依赖清单。GPU 构建依赖本机显卡和驱动，优先使用上方一键脚本或 [PyTorch 官方选择器](https://pytorch.org/get-started/locally/)生成的安装命令。可运行 `python -m no_minimap_lab.install_xfeat` 检查 submodule 和权重是否齐全。
 
 ## 使用
 
